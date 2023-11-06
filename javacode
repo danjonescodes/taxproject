@@ -1,0 +1,19 @@
+const incomes = [80000, 24000, 9000, 500000];
+const taxes = [];
+
+for(let i = 0; i <= (incomes.length - 1); i++) {
+    if (incomes[i] <= 12570) {
+        console.log('No tax is due!');
+    } else if (incomes[i] > 12570 && incomes[i] <= 50270) {
+        taxes[i] = (incomes[i] - 12570) * 0.2;
+        console.log(`You owe ${taxes[i]} in taxes`);
+    } else if (incomes[i] > 50270 && incomes[i] <= 125140) {
+        taxes[i] = (incomes[i] - 12570) * 0.4;
+        console.log(`You owe ${taxes[i]} in taxes`);
+    } else {
+        taxes[i] = (incomes[i] - 12570) * 0.45;
+        console.log(`You owe ${taxes[i]} in taxes`);
+    }
+}
+
+console.log(taxes);
