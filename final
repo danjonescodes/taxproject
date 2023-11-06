@@ -1,0 +1,20 @@
+const income1 = (prompt("How much do you earn per year?"));
+
+const incomes = [];
+incomes.push(income1);
+const taxes = [];
+
+for(let i = 0; i <= (incomes.length - 1); i++) {
+    if (incomes[i] <= 12570) {
+        alert(`No tax is due, you are £${12571 - incomes[i]} away from paying tax!`);
+    } else if (incomes[i] > 12570 && incomes[i] <= 50270) {
+        taxes[i] = (incomes[i] - 12570) * 0.2;
+        alert(`You owe £${taxes[i]} in taxes!`);
+    } else if (incomes[i] > 50270 && incomes[i] <= 125140) {
+        taxes[i] = (incomes[i] - 12570) * 0.4;
+        alert(`You owe £${taxes[i]} in taxes!`);
+    } else {
+        taxes[i] = (incomes[i] - 12570) * 0.45;
+        alert(`You owe £${taxes[i]} in taxes!`);
+    }
+}
